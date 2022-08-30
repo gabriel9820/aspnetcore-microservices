@@ -66,3 +66,14 @@ services:
       - basketdb
     volumes:
       - ~/.vsdbg:/remote_debugger:rw
+
+  discountapi:
+    container_name: discountapi
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - 8002:5002
+    depends_on:
+      - discountdb
+    volumes:
+      - ~/.vsdbg:/remote_debugger:rw

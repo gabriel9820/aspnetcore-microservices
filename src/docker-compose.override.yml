@@ -62,3 +62,12 @@ services:
       - 8001:5001
     depends_on:
       - basketdb
+
+  discountapi:
+    container_name: discountapi
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - 8002:5002
+    depends_on:
+      - discountdb
