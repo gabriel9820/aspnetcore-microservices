@@ -71,3 +71,12 @@ services:
       - 8002:5002
     depends_on:
       - discountdb
+
+  discountgrpc:
+    container_name: discountgrpc
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - 8003:5003
+    depends_on:
+      - discountdb
