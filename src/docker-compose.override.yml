@@ -77,6 +77,6 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
     ports:
-      - 8003:5003
+      - 8003:80
     depends_on:
       - discountdb
